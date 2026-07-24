@@ -1,21 +1,17 @@
-/* Custom Global CSS Design Properties with Vibrant Colors */
 :root {
-    --primary: #0f172a;       /* Elegant Deep Slate Blue */
-    --accent: #2563eb;        /* Corporate Blue for contrasts */
+    --primary: #0f172a;       
+    --accent: #2563eb;        
     --text: #334155;
     --bg-main: #ffffff;
     --bg-alt: #f8fafc;
     --border: #e2e8f0;
     --card-bg: #ffffff;
     --text-white: #ffffff;
-
-    /* REDOING the vibrant color palette: Purple/Blue dynamic gradient inspired by unnamed.jpg[cite: 1] */
     --gradient: linear-gradient(135deg, #a100ff 0%, #2563eb 50%, #00f3ff 100%);
-    --vibrant-text: #a100ff; /* The purple anchor */
-    --vibrant-dark: #0f172a; /* Keeping text contrasting on light backgrounds */
+    --vibrant-text: #a100ff; 
+    --vibrant-dark: #0f172a; 
 }
 
-/* Innovation Dark Mode Override Rules */
 [data-theme="dark"] {
     --primary: #f8fafc;
     --accent: #3b82f6;
@@ -24,7 +20,6 @@
     --bg-alt: #1e293b;
     --border: #334155;
     --card-bg: #1e293b;
-    /* Keeping the gradient anchor points bright in dark mode */
     --vibrant-text: #e0acff; 
 }
 
@@ -55,21 +50,14 @@ body {
 .bg-light { background-color: var(--bg-alt); }
 .text-white { color: #ffffff !important; }
 
-/* Dynamic Multi-Color Styling Classes */
 .dynamic-bg {
     background: var(--gradient);
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 }
 
-.text-vibrant {
-    color: var(--vibrant-text);
-}
+.text-vibrant { color: var(--vibrant-text); }
+.bg-vibrant-dark { background-color: #0f172a; }
 
-.bg-vibrant-dark {
-    background-color: #0f172a;
-}
-
-/* Updated Responsive Header */
 header {
     background-color: var(--bg-main);
     border-bottom: 1px solid var(--border);
@@ -122,7 +110,6 @@ nav {
 
 .theme-btn:hover { background-color: var(--bg-alt); }
 
-/* Updated Hero Area (Image & Text Layout) */
 .hero {
     min-height: 85vh;
     display: flex;
@@ -132,7 +119,7 @@ nav {
 
 .hero-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Image left, text right */
+    grid-template-columns: 1fr 1fr; 
     gap: 60px;
     align-items: center;
 }
@@ -143,13 +130,12 @@ nav {
     justify-content: center;
 }
 
-/* Frame unnamed.jpg[cite: 1] into a modern circle[cite: 3] */
 .profile-img {
     width: 320px;
     height: 320px;
     border-radius: 50%;
     object-fit: cover;
-    object-position: center top; /* Adjust to unnamed.jpg[cite: 1] composition */
+    object-position: center top; 
     border: 10px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
@@ -198,7 +184,6 @@ nav {
     opacity: 0.8;
 }
 
-/* Functional CTA Buttons with Micro-Animations[cite: 3] */
 .btn {
     display: inline-block;
     padding: 14px 32px;
@@ -210,7 +195,7 @@ nav {
 
 .vibrant-cta-btn {
     background-color: var(--text-white);
-    color: #a100ff; /* Purple accent button on gradient background */
+    color: #a100ff; 
     margin-right: 15px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
@@ -219,7 +204,6 @@ nav {
 .no-border { border: none !important; opacity: 0.9; font-weight: 600; }
 .no-border:hover { opacity: 1; text-decoration: underline; }
 
-/* Dynamic Titles that use Gradient text[cite: 3] */
 .section-title { font-size: 36px; margin-bottom: 40px; }
 .title-gradient {
     background: var(--gradient);
@@ -236,7 +220,6 @@ nav {
     font-size: 18px;
 }
 
-/* Updated Skill Card Hovers for electric pop[cite: 3] */
 .skills-grid, .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -255,10 +238,10 @@ nav {
 .card-icon { font-size: 30px; margin-bottom: 15px; }
 .skill-card h4 { color: var(--primary); margin-bottom: 10px; }
 
-/* Timeline Marker Gradients[cite: 3] */
+/* Fixed Timeline Formatting */
 .timeline { border-left: 3px solid var(--border); padding-left: 30px; position: relative; }
 .timeline-item { margin-bottom: 50px; position: relative; }
-.markers-gradient {
+.time-marker {
     position: absolute;
     width: 16px;
     height: 16px;
@@ -273,7 +256,6 @@ nav {
 .time-content h5 { font-size: 16px; font-weight: 500; margin-bottom: 15px; opacity: 0.8; }
 .time-content ul { list-style-position: inside; padding-left: 5px; }
 
-/* Updated Project Cards */
 .project-card {
     background-color: var(--card-bg);
     border: 1px solid var(--border);
@@ -303,7 +285,6 @@ nav {
 .edu-card h4 { color: var(--primary); font-size: 19px;}
 .year-span { display: inline-block; font-size: 13px; font-weight: 700; margin-bottom: 15px; }
 
-/* Updated Contact Alignment */
 .contact-box { text-align: center; max-width: 700px; margin: 0 auto; }
 .contact-box h3 { font-size: 36px; margin-bottom: 15px; }
 .contact-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; margin: 40px 0; }
@@ -319,7 +300,6 @@ footer {
     font-size: 14px;
 }
 
-/* Cross-Browser Device Compatibility Layout Control[cite: 3] */
 @media (max-width: 992px) {
     .hero-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
     .hero-image-container { order: -1; }
