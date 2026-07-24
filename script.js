@@ -1,20 +1,33 @@
-// Dynamic UI Theme Configuration Switcher Script
-const toggleButton = document.getElementById('theme-toggle');
-const currentTheme = localStorage.getItem('theme') || 'light';
+// Theme toggle: switches data-theme between light and dark, remembers choice
+(function () {
+    const root = document.documentElement;
+    const toggleBtn = document.getElementById('theme-toggle');
+    const stored = localStorage.getItem('cv-theme');
 
-// Initialize the saved user theme preference configuration
-if (currentTheme === 'dark') {
-    document.documentElement.setAttribute('data-theme', 'dark');
-}
-
-// Toggle interface themes via interactive click event listeners
-toggleButton.addEventListener('click', () => {
-    let theme = 'light';
-    if (document.documentElement.getAttribute('data-theme') !== 'dark') {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        theme = 'dark';
-    } else {
-        document.documentElement.removeAttribute('data-theme');
+    if (stored === 'dark') {
+        root.setAttribute('data-theme', 'dark');
     }
-    localStorage.setItem('theme', theme);
-});
+
+    toggleBtn?.addEventListener('click', function () {
+        const isDark = root.getAttribute('data-theme') === 'dark';
+        if (isDark) {
+            root.removeAttribute('data-theme');
+            localStorage.setItem('cv-theme', 'light');
+        } else {
+            root.setAttribute('data-theme', 'dark');
+            localStorage.setItem('cv-theme', 'dark');
+        }
+    });
+
+    // Smooth scroll for in-page nav links
+    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href');
+            const target = document.querySelector(targetId);
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+})();
