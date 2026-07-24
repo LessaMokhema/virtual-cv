@@ -1,313 +1,189 @@
-:root {
-    --primary: #0f172a;       
-    --accent: #2563eb;        
-    --text: #334155;
-    --bg-main: #ffffff;
-    --bg-alt: #f8fafc;
-    --border: #e2e8f0;
-    --card-bg: #ffffff;
-    --text-white: #ffffff;
-    --gradient: linear-gradient(135deg, #a100ff 0%, #2563eb 50%, #00f3ff 100%);
-    --vibrant-text: #a100ff; 
-    --vibrant-dark: #0f172a; 
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palesa Mokhema | Interactive Virtual CV</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-[data-theme="dark"] {
-    --primary: #f8fafc;
-    --accent: #3b82f6;
-    --text: #cbd5e1;
-    --bg-main: #0f172a;
-    --bg-alt: #1e293b;
-    --border: #334155;
-    --card-bg: #1e293b;
-    --vibrant-text: #e0acff; 
-}
+    <!-- Top Navigation Bar -->
+    <header>
+        <nav class="container">
+            <div class="logo">PM<span>.</span></div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle UI Theme">🌗 Mode</button>
+        </nav>
+    </header>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <!-- Vibrant Hero Landing Display -->
+    <section class="hero dynamic-bg">
+        <div class="container hero-grid">
+            <div class="hero-image-container">
+                <img src="unnamed.jpg" alt="Palesa Mokhema - AWS Summit Profile Picture" class="profile-img">
+                <div class="aws-marker">AWS Summit | JHB</div>
+            </div>
+            <div class="hero-content">
+                <span class="badge">Open to 2027 Graduate Programmes</span>
+                <h1 class="text-white">Palesa Mokhema</h1>
+                <h2 class="text-white">Student IT Intern & Full-Stack Developer</h2>
+                <p class="text-white">Final-year BSc IT student combining full-stack development skills with hands-on technical support training. Driven to deliver scalable, high-quality digital solutions in fintech and enterprise environments.</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn vibrant-cta-btn">Explore Projects</a>
+                    <a href="#contact" class="btn secondary-btn text-white no-border">Connect With Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-body {
-    font-family: 'Inter', sans-serif;
-    color: var(--text);
-    background-color: var(--bg-main);
-    line-height: 1.7;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
+    <!-- About Profile Section -->
+    <section id="about" class="container section">
+        <h3 class="section-title title-gradient">About Me</h3>
+        <div class="about-card">
+            <p>I focus heavily on bridging backend engineering efficiency with beautiful, responsive frontends. Through rigorous academic frameworks at North-West University and concurrent practical corporate technical roles, I cultivate sharp problem-solving workflows aimed directly at systems optimization, runtime stability, and fintech architecture alignment.</p>
+        </div>
+    </section>
 
-.container {
-    width: 90%;
-    max-width: 1100px;
-    margin: 0 auto;
-}
+    <!-- Technical Skills Dynamic Section -->
+    <section id="skills" class="bg-light">
+        <div class="container section">
+            <h3 class="section-title title-gradient">Technical Expertise</h3>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="card-icon">💻</div>
+                    <h4>Development Languages</h4>
+                    <p>Java, C++, C#, Python, HTML5, CSS3, JavaScript (ES6+)</p>
+                </div>
+                <div class="skill-card">
+                    <div class="card-icon">🗄️</div>
+                    <h4>Databases & Frameworks</h4>
+                    <p>SQL, Relational Database Management Systems (RDBMS), Agile Methodologies, Systems Analysis & Design</p>
+                </div>
+                <div class="skill-card">
+                    <div class="card-icon">🛠️</div>
+                    <h4>Infrastructure & Core Focus</h4>
+                    <p>Fintech Solutions, Cloud Readiness, Technical Support, Hardware/Software Troubleshooting</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.section {
-    padding: 100px 0;
-}
+    <!-- Professional Experience Timeline -->
+    <section id="experience" class="container section">
+        <h3 class="section-title title-gradient">Professional Experience</h3>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="time-marker"></div>
+                <div class="time-content">
+                    <span class="date-badge text-vibrant">Mar 2026 - Present</span>
+                    <h4>Student Intern</h4>
+                    <h5>Screentime1920</h5>
+                    <ul>
+                        <li>Collaborate on software development workflows, contributing clean, maintainable Java/C# code to active enterprise projects.</li>
+                        <li>Analyze user requirements to design robust frontend interfaces and back-end logic, ensuring seamless system alignment and optimized runtime performance.</li>
+                        <li>Participate in code reviews, technical testing, and structured debugging cycles to identify bottlenecks and maximize application stability.</li>
+                    </ul>
+                </div>
+            </div>
 
-.bg-light { background-color: var(--bg-alt); }
-.text-white { color: #ffffff !important; }
+            <div class="timeline-item">
+                <div class="time-marker"></div>
+                <div class="time-content">
+                    <span class="date-badge text-vibrant">May 2024</span>
+                    <h4>Web Developer Intern</h4>
+                    <h5>Oasis Infobyte</h5>
+                    <ul>
+                        <li>Designed and engineered responsive web layouts using modern web standards, optimizing cross-browser compatibility and user-centric flows.</li>
+                        <li>Implemented frontend structures that streamlined production deployment and successfully reduced page load latencies.</li>
+                        <li>Utilized diagnostic problem-solving and systems analysis to troubleshoot complex defects and refine existing architectural codebases.</li>
+                    </ul>
+                </div>
+            </div>
 
-.dynamic-bg {
-    background: var(--gradient);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-}
+            <div class="timeline-item">
+                <div class="time-marker"></div>
+                <div class="time-content">
+                    <span class="date-badge text-vibrant">Sept 2024 - Jan 2026</span>
+                    <h4>Part-Time Waitress & Barista</h4>
+                    <h5>Slouw Cafe</h5>
+                    <p>Developed exceptional time-management, cross-functional communication, and high-pressure operational skills by balancing demanding shift rotations alongside full-time BSc IT academic commitments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.text-vibrant { color: var(--vibrant-text); }
-.bg-vibrant-dark { background-color: #0f172a; }
+    <!-- Projects Component -->
+    <section id="projects" class="bg-light">
+        <div class="container section">
+            <h3 class="section-title title-gradient">Featured Projects</h3>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+                    <h4>MeteoDome Travel Site</h4>
+                    <p>Developed a luxury, responsive web portal for highveld heritage tourism featuring advanced UI interactions, interactive parallax storytelling layouts, and real-time booking enquiry engines.</p>
+                    <a href="https://github.com/LessaMokhema" target="_blank" class="project-btn text-vibrant">View Code Repository &rarr;</a>
+                </div>
 
-header {
-    background-color: var(--bg-main);
-    border-bottom: 1px solid var(--border);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    transition: background-color 0.3s ease;
-}
+                <div class="project-card">
+                    <div class="project-tags"><span>Java</span><span>SQL</span></div>
+                    <h4>Personal Finance Tracker (Backend)</h4>
+                    <p>Engineered a robust relational database schema and optimized back-end architectural logic to securely track, categorize, and accurately report on multi-tier user transactions in real time.</p>
+                    <a href="https://github.com/LessaMokhema" target="_blank" class="project-btn text-vibrant">View Code Repository &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-}
+    <!-- Education Section -->
+    <section id="education" class="container section">
+        <h3 class="section-title title-gradient">Education & Credentials</h3>
+        <div class="edu-grid">
+            <div class="edu-card">
+                <h4>Bachelor of Science in Information Technology (BSc IT)</h4>
+                <h5>North-West University | NQF Level 7</h5>
+                <span class="year-span text-vibrant">2023 - Present</span>
+                <p>Key focus areas: Advanced Programming (Java, C++), Database Management (SQL), Software Engineering, Systems Analysis, Data Structures & Algorithms. Academic transcripts available upon request.</p>
+            </div>
+            <div class="edu-card">
+                <h4>FETC: IT (Technical Support) Learnership</h4>
+                <h5>Training Force</h5>
+                <span class="year-span text-vibrant">Feb 2026 - Jan 2027</span>
+                <p>One-year accredited learnership combining structured technical support training with practical workplace experience, running concurrently with full-time BSc IT studies.</p>
+            </div>
+        </div>
+    </section>
 
-.logo {
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--primary);
-}
+    <!-- Contact Layer -->
+    <section id="contact" class="bg-vibrant-dark text-white">
+        <div class="container section">
+            <div class="contact-box">
+                <h3>Let's Formulate a Dynamic Partnership</h3>
+                <p>Targeting engineering, development, and system analyst roles across graduate pathways.</p>
+                <div class="contact-links">
+                    <a href="mailto:palesagalaletsang5@gmail.com" class="c-link">✉️ palesagalaletsang5@gmail.com</a>
+                    <a href="https://github.com/LessaMokhema" target="_blank" class="c-link">💻 GitHub: LessaMokhema</a>
+                    <a href="https://linkedin.com/in/palesa-mokhema-58727920b" target="_blank" class="c-link">🔗 LinkedIn Profile</a>
+                </div>
+                <p class="loc-tag">📍 Located in Fourways, Johannesburg (Willing to relocate / hybrid models)</p>
+            </div>
+        </div>
+    </section>
 
-.logo span { color: var(--accent); }
+    <footer>
+        <p>&copy; 2026 Palesa Mokhema. Optimized for modern cross-platform browser compliance.</p>
+    </footer>
 
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--text);
-    font-weight: 500;
-    transition: color 0.2s ease;
-}
-
-.nav-links a:hover { color: var(--accent); }
-
-.theme-btn {
-    background: none;
-    border: 1px solid var(--border);
-    padding: 8px 16px;
-    border-radius: 20px;
-    cursor: pointer;
-    color: var(--primary);
-    font-weight: 500;
-    transition: all 0.2s ease;
-}
-
-.theme-btn:hover { background-color: var(--bg-alt); }
-
-.hero {
-    min-height: 85vh;
-    display: flex;
-    align-items: center;
-    padding: 100px 0;
-}
-
-.hero-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-    gap: 60px;
-    align-items: center;
-}
-
-.hero-image-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
-
-.profile-img {
-    width: 320px;
-    height: 320px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center top; 
-    border: 10px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-}
-
-.aws-marker {
-    position: absolute;
-    bottom: -15px;
-    right: 30px;
-    background: var(--primary);
-    color: #ffffff;
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: 600;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-.badge {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: var(--text-white);
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: 600;
-    display: inline-block;
-    margin-bottom: 20px;
-}
-
-.hero h1 {
-    font-size: 64px;
-    line-height: 1.1;
-    margin-bottom: 10px;
-}
-
-.hero h2 {
-    font-size: 26px;
-    font-weight: 400;
-    margin-bottom: 30px;
-    opacity: 0.9;
-}
-
-.hero p {
-    font-size: 18px;
-    max-width: 700px;
-    margin-bottom: 50px;
-    opacity: 0.8;
-}
-
-.btn {
-    display: inline-block;
-    padding: 14px 32px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 700;
-    transition: all 0.2s ease;
-}
-
-.vibrant-cta-btn {
-    background-color: var(--text-white);
-    color: #a100ff; 
-    margin-right: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-.vibrant-cta-btn:hover { background-color: #f8f8f8; transform: translateY(-3px); box-shadow: 0 15px 30px rgba(0,0,0,0.15); }
-.no-border { border: none !important; opacity: 0.9; font-weight: 600; }
-.no-border:hover { opacity: 1; text-decoration: underline; }
-
-.section-title { font-size: 36px; margin-bottom: 40px; }
-.title-gradient {
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block;
-}
-
-.about-card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border);
-    padding: 40px;
-    border-radius: 8px;
-    font-size: 18px;
-}
-
-.skills-grid, .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.skill-card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border);
-    padding: 30px;
-    border-radius: 8px;
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.skill-card:hover { transform: scale(1.03); border-color: var(--vibrant-text); }
-.card-icon { font-size: 30px; margin-bottom: 15px; }
-.skill-card h4 { color: var(--primary); margin-bottom: 10px; }
-
-/* Fixed Timeline Formatting */
-.timeline { border-left: 3px solid var(--border); padding-left: 30px; position: relative; }
-.timeline-item { margin-bottom: 50px; position: relative; }
-.time-marker {
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    background: var(--gradient);
-    border-radius: 50%;
-    left: -40px;
-    top: 8px;
-    box-shadow: 0 0 10px rgba(161, 0, 255, 0.3);
-}
-
-.time-content h4 { font-size: 22px; color: var(--primary); }
-.time-content h5 { font-size: 16px; font-weight: 500; margin-bottom: 15px; opacity: 0.8; }
-.time-content ul { list-style-position: inside; padding-left: 5px; }
-
-.project-card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border);
-    padding: 30px;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.project-tags { display: flex; gap: 10px; margin-bottom: 15px; }
-.project-tags span {
-    background-color: rgba(161, 0, 255, 0.05);
-    color: var(--vibrant-text);
-    font-size: 12px;
-    padding: 4px 10px;
-    border-radius: 4px;
-    font-weight: 600;
-}
-
-.project-card h4 { color: var(--primary); margin-bottom: 10px; font-size: 19px;}
-.project-card p { margin-bottom: 25px; font-size: 15px; }
-.project-btn { text-decoration: none; font-weight: 700; font-size: 15px; }
-
-.edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 30px; }
-.edu-card { background-color: var(--card-bg); border: 1px solid var(--border); padding: 30px; border-radius: 8px; }
-.edu-card h4 { color: var(--primary); font-size: 19px;}
-.year-span { display: inline-block; font-size: 13px; font-weight: 700; margin-bottom: 15px; }
-
-.contact-box { text-align: center; max-width: 700px; margin: 0 auto; }
-.contact-box h3 { font-size: 36px; margin-bottom: 15px; }
-.contact-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; margin: 40px 0; }
-.c-link { color: #ffffff; text-decoration: none; font-size: 18px; font-weight: 600; }
-.c-link:hover { color: rgba(255, 255, 255, 0.8); text-decoration: underline; }
-.loc-tag { font-size: 14px; opacity: 0.7; }
-
-footer {
-    text-align: center;
-    padding: 30px 0;
-    border-top: 1px solid var(--border);
-    background-color: var(--bg-alt);
-    font-size: 14px;
-}
-
-@media (max-width: 992px) {
-    .hero-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
-    .hero-image-container { order: -1; }
-    .hero h1 { font-size: 48px; }
-    .vibrant-cta-btn { margin-right: 0; margin-bottom: 15px; }
-}
-@media (max-width: 768px) {
-    .nav-links { display: none; }
-    .edu-grid { grid-template-columns: 1fr; }
-    .profile-img { width: 250px; height: 250px; }
-}
+    <script src="script.js"></script>
+</body>
+</html>
